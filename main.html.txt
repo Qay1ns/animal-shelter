@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помощь и поддежка для бездомных животных</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #A1C4FD, #C2E9FB);
+            margin: 0;
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100vh;
+        }
+        .logo {
+            font-size: 1.38vw;
+            font-weight: 300;
+            color: white;
+            max-width: 20vw;
+            line-height: 1.2;
+            margin-bottom: 4vw;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 10%;
+        }
+        .content {
+            width: 50%;
+            color: white;
+        }
+        .title {
+            font-size: 3vw;
+            font-weight: bold;
+            max-width: 40vw;
+            line-height: 1.2;
+            white-space: pre-line;
+        }
+        .description {
+            font-size: 1.2vw;
+            margin: 2vw 0;
+        }
+        .button {
+        background: #FFD166;
+        color: white;
+        padding: 1vw 2vw;
+        border-radius: 2vw;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        transition: transform 0.2s, filter 0.2s;
+    }
+
+    .button:hover {
+        filter: brightness(85%);
+        transform: scale(1.05);
+    }
+        .image-container {
+            width: 50%;
+            position: relative;
+            right: -15%;
+            top: 0;
+        }
+        .image-container img {
+            width: 135%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">Помощь и поддежка для бездомных животных</div>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Мы в ответе<br>за тех кого приручили</h1>
+            <p class="description">Если вы считаете себя добрым и ответственным человеком,<br>сделайте счастливым маленького или большого хвостика</p>
+            <a href="main.html2rus.html" class="button">найти питомца</a>
+        </div>
+        <div class="image-container">
+            <img src="https://avatars.mds.yandex.net/i?id=2888ded4946084c146342ecd1489c67b20d88841-12376819-images-thumbs&n=13" alt="Cute puppy">
+        </div>
+    </div>
+</body>
+</html>
