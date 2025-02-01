@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создатели</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #A1C4FD, #C2E9FB);
+            color: white;
+            text-align: left;
+            padding: 2%;
+        }
+        h1 {
+            font-size: 120%;
+            font-weight: bold;
+            opacity: 0.9;
+            text-align: center;
+        }
+        p {
+            font-size: 95%;
+            text-align: center;
+        }
+        .designer {
+            font-size: 200%;
+            margin: 2% 0;
+            font-weight: bold;
+            text-align: left;
+            padding: 1%;
+        }
+        .back-button {
+            display: block;
+            width: 20%;
+            margin: 3% auto;
+            padding: 1%;
+            font-size: 120%;
+            text-align: center;
+            background: #FFD166;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Создатели</h1>
+    <p>Эти люди создали дизайн и программный код для стабильной работы сайта:</p>
+    <p class="designer">Максим Мохов - UX дизайн</p>
+    <p class="designer">Василиса Сидоряк - UI дизайн</p>
+    <p class="designer">Майя Цепина - UX дизайн</p>
+    <button class="back-button" onclick="window.location.href='main.html2rus.html'">Назад</button>
+</body>
+</html>

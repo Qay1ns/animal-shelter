@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Питомец</title>
+    <style>
+        /* Основной фон с градиентом */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #A1C4FD, #C2E9FB); /* Градиент */
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start; /* Выровняем содержимое по левому краю */
+            align-items: flex-start; /* Выровняем содержимое по верхнему краю */
+            overflow: hidden; /* Прячем все, что выходит за пределы */
+        }
+        /* Контейнер для контента */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Выровняем все элементы по левому краю */
+            padding: 5%;
+            height: 100%;
+            width: 100%;
+            max-width: 100vw;
+            overflow-y: auto; /* Добавляем прокрутку, если контент не вмещается по высоте */
+            box-sizing: border-box;
+        }
+        /* Картинка питомца */
+        .pet-image {
+            width: 18vw; /* Увеличиваем ширину изображения */
+            height: auto; /* Пропорциональное сохранение высоты */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень вокруг изображения */
+            margin-bottom: 3%;
+        }
+        /* Детали питомца */
+        .pet-details {
+            margin-bottom: 3%;
+            width: 100%;
+        }
+        .pet-details p {
+            font-size: 2.2vw;
+            margin: 0;
+            color: #444;
+        }
+        /* История питомца */
+        .story {
+            font-size: 2.4vw;
+            color: #80cbc4;
+            margin-bottom: 3%;
+            width: 100%;
+            word-wrap: break-word;
+        }
+        /* Кнопки */
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+            gap: 3%;
+            width: 100%;
+            margin-bottom: 6%;
+			margin-top: -4%;
+        }
+        .like-button, .dislike-button {
+            padding: 1.2% 2.4%;
+            background-color: #92C1C5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 2.4vw;
+        }
+        .like-button:hover, .dislike-button:hover {
+            background-color: #00acc1;
+            transform: scale(1.1); /* Легкое увеличение кнопки при наведении */
+        }
+        /* Кнопка для приюта */
+        .adopt-button {
+            padding: 1.3% 1.5%;
+            background-color: #80deea;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 2.8vw;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 80%;
+            max-width: 220px;
+            margin-top: -3.8%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень на кнопке */
+        }
+        .adopt-button:hover {
+            background-color: #4dd0e1;
+        }
+
+        /* Медиазапросы для адаптивности */
+        @media (max-width: 768px) {
+            .pet-image {
+                width: 40vw;
+            }
+            .pet-details p, .story p {
+                font-size: 4vw;
+            }
+            .like-button, .dislike-button {
+                font-size: 5vw;
+            }
+            .adopt-button {
+                font-size: 5vw;
+            }
+        }
+
+        /* Дополнительные стили для плавности */
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="pet-image" src="https://i.pinimg.com/originals/fc/ac/8f/fcac8fe7f0542ec3e55ae3161cdd8e35.jpg" alt="Питомец">
+        <div class="pet-details">
+            <p><strong>Имя:</strong> Барсик</p>
+            <p><strong>Возраст:</strong> 1 год</p>
+        </div>
+        <div class="story">
+            <p>История: гулял по улицам,<br>и тёрся об ноги всем<br>в надежде на еду:)</p>
+        </div>
+        <div class="buttons">
+            <button class="like-button">👍</button>
+            <button class="dislike-button">👎</button>
+        </div>
+        <button class="adopt-button">Приют</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск животных</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #A1C4FD, #C2E9FB);
+            text-align: center;
+            color: white;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2%;
+            padding: 2%;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 20%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: black;
+            display: none;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .card-info {
+            padding: 5%;
+        }
+        .age {
+            background: #55c3ff;
+            color: white;
+            padding: 2%;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 5%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 2.6%;
+        }
+        .header a {
+            color: #80deea;
+            text-decoration: none;
+            margin: 0 2%;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #FFD166;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .back-button:hover {
+            background: #E6B85D;
+            transform: scale(1.05);
+        }
+        .filter-buttons, .show-more {
+            margin: -1%;
+        }
+        .filter-buttons button, .show-more button, .details-button, .adoption-form button {
+            padding: 1%;
+            font-size: 90%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0.5%;
+            background: #FFD166;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .filter-buttons button:hover, .show-more button:hover, .details-button:hover, .adoption-form button:hover {
+            background: #E6B85D;
+            transform: scale(1.05);
+        }
+        .adoption-form {
+            background: white;
+            color: black;
+            padding: 2%;
+            margin: 2% auto 0;
+            width: 30%;
+            border-radius: 10px;
+        }
+        .adoption-form input {
+            width: 100%;
+            padding: 2%;
+            margin-top: 2%;
+        }
+        .card:nth-child(-n+3) {
+            display: block;
+        }
+        .hidden-animals {
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        function filterAnimals(type) {
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.display = (type === 'all' || card.classList.contains(type)) ? 'block' : 'none';
+            });
+        }
+        
+        function showMore() {
+            document.querySelectorAll('.hidden-animals .card').forEach(card => {
+                card.style.display = 'block';
+            });
+            document.getElementById('show-more-btn').style.display = 'none';
+            document.getElementById('hide-btn').style.display = 'inline-block';
+        }
+
+        function hideAnimals() {
+            document.querySelectorAll('.hidden-animals .card').forEach(card => {
+                card.style.display = 'none';
+            });
+            document.getElementById('show-more-btn').style.display = 'inline-block';
+            document.getElementById('hide-btn').style.display = 'none';
+        }
+
+        function openPDF() {
+            window.open('path_to_your_file.pdf', '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <a href="main.htmlrus.html" class="back-button">&#8592; Назад</a>
+        <div>
+            <a href="main.html4rus.html">Создатели</a>
+            <a href="Presentation.pdf" onclick="Presentation.pdf">Проект</a>
+            <a href="main.html3rus.html">Приюты</a>
+        </div>
+    </div>
+    
+    <div class="filter-buttons">
+        <button onclick="filterAnimals('cat')">Показать только котов</button>
+        <button onclick="filterAnimals('dog')">Показать только собак</button>
+        <button onclick="filterAnimals('all')">Показать всех</button>
+    </div>
+
+    <div class="container">
+        <div class="card cat">
+            <img src="https://i.pinimg.com/originals/19/e2/b0/19e2b0c362faa2c94fc54dc8b650437f.jpg" alt="Давидик">
+            <div class="card-info">
+                <h3>Давидик</h3>
+                <p>Москва</p>
+                <span class="age">7 месяцев</span>
+                <a href="main.html5.2rus.html"><button class="details-button">подробнее</button></a>
+            </div>
+        </div>
+        <div class="card dog">
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/119173/pub_5badedf9d9cae500aebee25b_5badee1d3b520900ac886e7c/scale_1200" alt="Marik">
+            <div class="card-info">
+                <h3>Марик</h3>
+                <p>Москва</p>
+                <span class="age">2 года</span>
+                <a href="main.html5rus.html"><button class="details-button">подробнее</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden-animals container">
+        <div class="card cat">
+            <img src="https://i.pinimg.com/originals/fc/ac/8f/fcac8fe7f0542ec3e55ae3161cdd8e35.jpg" alt="барсик">
+            <div class="card-info">
+                <h3>Барсик</h3>
+                <p>Москва</p>
+                <span class="age">1 год</span>
+                <a href="main.html5.1rus.html"><button class="details-button">подробнее</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="show-more">
+        <button id="show-more-btn" onclick="showMore()">показать больше</button>
+        <button id="hide-btn" onclick="hideAnimals()" style="display: none;">спрятать</button>
+    </div>
+
+    <div class="adoption-form">
+        <input type="text" placeholder="Ваше имя">
+        <input type="email" placeholder="Ваш email">
+        <input type="text" placeholder="Имя питомца">
+        <button>Отправить</button>
+    </div>
+</body>
+</html>
